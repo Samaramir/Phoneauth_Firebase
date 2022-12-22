@@ -12,6 +12,18 @@ class WelcomeScrean extends StatefulWidget {
 class _WelcomeScreanState extends State<WelcomeScrean> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: SafeArea( child: Center(
+        child: Padding(
+            padding:const EdgeInsets.symmetric(vertical: 25,horizontal: 35),
+          child: Column(
+            children:[
+              Image.asset("assets/sign.png.jpg"),
+            ],
+          ),
+        ),
+      ),
+      ),
+    );
   }
 }
