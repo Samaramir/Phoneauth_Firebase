@@ -12,6 +12,6 @@ class WelcomeScrean extends StatefulWidget {
 class _WelcomeScreanState extends State<WelcomeScrean> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold();
   }
 }
