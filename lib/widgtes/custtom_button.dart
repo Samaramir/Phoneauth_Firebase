@@ -11,6 +11,11 @@ class CustomButton extends StatelessWidget {
         style:ButtonStyle(
           foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
          backgroundColor: MaterialStateProperty.all<Color>(Colors.purple),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25.0),
+          ),
+          ),
 
         ),
       child: Text(text,style:const TextStyle(fontSize: 16),),
