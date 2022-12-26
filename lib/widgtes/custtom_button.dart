@@ -9,7 +9,9 @@ class CustomButton extends StatelessWidget {
     return ElevatedButton(
         onPressed: onPressed,
         style:ButtonStyle(
-          foregroundColor: MaterialStateProperty.all<Color>(Colors.white)
+          foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+         backgroundColor: MaterialStateProperty.all<Color>(Colors.purple),
+
         ),
       child: Text(text,style:const TextStyle(fontSize: 16),),
 
