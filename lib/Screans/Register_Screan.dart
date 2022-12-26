@@ -9,6 +9,15 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+        child: Center(child: Padding(
+          padding: EdgeInsets.symmetric(horizontal:25 ,vertical:35 ),
+          child: Column(
+            children: [],
+          ),
+        ),),
+      ),
+    );
   }
 }
