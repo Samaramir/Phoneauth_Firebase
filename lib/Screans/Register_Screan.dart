@@ -26,7 +26,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 child: Image.asset("assets/Signup.jpg"),
 
 
-              )
+              ),
+              const SizedBox(height: 20,),
+              const Text("Register"),
             ],
           ),
         ),),
