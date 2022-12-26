@@ -41,6 +41,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
           const SizedBox(height: 20,),
               TextFormField(
+                cursorColor: Colors.purple,
                 controller: phoneController,
                 decoration: InputDecoration(
                   hintText: "Enter phone number",
