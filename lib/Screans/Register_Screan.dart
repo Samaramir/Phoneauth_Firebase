@@ -42,7 +42,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
           const SizedBox(height: 20,),
               TextFormField(
                 controller: phoneController,
+                decoration: InputDecoration(
+                  hintText: "Enter phone number",
+                  enabledBorder:OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    borderSide:const BorderSide(color: Colors.black12),
+                  ),
 
+                ),
 
               )
             ],
