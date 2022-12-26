@@ -12,9 +12,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       body: SafeArea(
         child: Center(child: Padding(
-          padding: EdgeInsets.symmetric(horizontal:25 ,vertical:35 ),
+          padding: EdgeInsets.symmetric(horizontal:35 ,vertical:25 ),
           child: Column(
-            children: [],
+            children: [
+              Container(width: 200,
+                height:200 ,
+                child: Image.asset(name),
+
+              )
+            ],
           ),
         ),),
       ),
