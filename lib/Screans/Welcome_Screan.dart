@@ -19,6 +19,7 @@ class _WelcomeScreanState extends State<WelcomeScrean> {
         child: Padding(
             padding:const EdgeInsets.symmetric(vertical: 25,horizontal: 35),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children:[
               Image.asset(
               "assets/sign.jpg",
