@@ -7,6 +7,7 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final TextEditingController phoneController=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +19,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Container(
                 width: 200,
                 height:200 ,
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(30.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,color: Colors.purple.shade50,
                 ),
@@ -28,7 +29,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
 
               ),
               const SizedBox(height: 20,),
-              const Text("Register"),
+              const Text("Register",style: TextStyle(fontSize: 22,fontWeight:FontWeight.bold),),
+          const SizedBox(height: 10,),
+          const Text("Add your phone number. We'll send you a verification code",style: TextStyle(fontSize: 14,
+              color:Colors.black38,
+              fontWeight:FontWeight.bold,
+
+          ),
+            textAlign: TextAlign.center,
+          ),
+
+          const SizedBox(height: 20,),
+              TextFormField(
+                controller: phoneController,
+
+
+              )
             ],
           ),
         ),),
