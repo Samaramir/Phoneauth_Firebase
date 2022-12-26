@@ -12,12 +12,19 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       body: SafeArea(
         child: Center(child: Padding(
-          padding: EdgeInsets.symmetric(horizontal:35 ,vertical:25 ),
+          padding: const EdgeInsets.symmetric(horizontal:35 ,vertical:25 ),
           child: Column(
             children: [
-              Container(width: 200,
+              Container(
+                width: 200,
                 height:200 ,
-                child: Image.asset(name),
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,color: Colors.purple.shade50,
+                ),
+
+                child: Image.asset("assets/Signup.jpg"),
+
 
               )
             ],
