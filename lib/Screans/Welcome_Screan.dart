@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgtes/custtom_button.dart';
+
 
 
 class WelcomeScrean extends StatefulWidget {
@@ -28,7 +30,15 @@ class _WelcomeScreanState extends State<WelcomeScrean> {
               const Text("Never a better time than now to start",style: TextStyle(fontSize: 14,
                   color:Colors.black38,
                   fontWeight:FontWeight.bold),),
-              const SizedBox(height: 20,)
+              const SizedBox(height: 20,),
+              //Custom_Button
+              SizedBox(
+                width: double.infinity,
+                child: CustomButton(
+                  onPressed:(){},
+                  text: "Get Started",
+                ),
+              )
               
             ],
           ),
