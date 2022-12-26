@@ -34,6 +34,7 @@ class _WelcomeScreanState extends State<WelcomeScrean> {
               //Custom_Button
               SizedBox(
                 width: double.infinity,
+                height: 50,
                 child: CustomButton(
                   onPressed:(){},
                   text: "Get Started",
