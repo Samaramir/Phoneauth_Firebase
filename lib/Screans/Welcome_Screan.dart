@@ -18,7 +18,7 @@ class _WelcomeScreanState extends State<WelcomeScrean> {
             padding:const EdgeInsets.symmetric(vertical: 25,horizontal: 35),
           child: Column(
             children:[
-              Image.asset("assets/sign.png.jpg"),
+              Image.asset("assets/sign.jpg"),
             ],
           ),
         ),
