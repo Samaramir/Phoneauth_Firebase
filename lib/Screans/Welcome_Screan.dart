@@ -22,8 +22,13 @@ class _WelcomeScreanState extends State<WelcomeScrean> {
               "assets/sign.jpg",
               height:300,
               ),
-              const SizedBox(height: 20),
-              const Text("Let's get started",style: TextStyle(fontSize: 22),)
+              const SizedBox(height: 22),
+              const Text("Let's get started",style: TextStyle(fontSize: 22,fontWeight:FontWeight.bold),),
+              const SizedBox(height: 10,),
+              const Text("Never a better time than now to start",style: TextStyle(fontSize: 14,
+                  color:Colors.black38,
+                  fontWeight:FontWeight.bold),),
+              const SizedBox(height: 20,)
               
             ],
           ),
