@@ -62,7 +62,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                      padding: const EdgeInsets.all(8.0),
                      child: InkWell(
                        onTap: (){},
-                       child: Text("${SelectedCountery.flagEmogi}",
+                       child: Text("${SelectedCountery.flagEmogi} +${SelectedCountery.phoneCode}",
                          style: TextStyle(
                          fontSize: 18,
                          color: Colors.black,
