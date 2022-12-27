@@ -61,15 +61,26 @@ class _RegisterScreenState extends State<RegisterScreen> {
                    prefixIcon: Container(
                      padding: const EdgeInsets.all(8.0),
                      child: InkWell(
-                       onTap: (){},
+                       onTap: (){
+                        // show##
+                       },
                        child: Text("${SelectedCountery.flagEmogi} +${SelectedCountery.phoneCode}",
-                         style: TextStyle(
+                         style: const TextStyle(
                          fontSize: 18,
                          color: Colors.black,
                          fontWeight: FontWeight.bold,
                        ),),
                      ),
-                   )
+                   ),
+                  suffixIcon:phoneController.text.length > 9 ?Container(
+                    height: 30,
+                    width: 30,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.green,
+                    ),
+                    child: const Icon(Icons.done,color: Colors.white,size: 20,),
+                  ):null
                 ),
 
               )
