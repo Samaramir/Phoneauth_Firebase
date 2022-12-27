@@ -15,6 +15,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
   );
   @override
   Widget build(BuildContext context) {
+    phoneController.selection=TextSelection.fromPosition(TextPosition(offset:phoneController.text.length,
+    ),
+    );
     return Scaffold(
       body: SafeArea(
         child: Center(child: Padding(
@@ -48,6 +51,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
               TextFormField(
                 cursorColor: Colors.purple,
                 controller: phoneController,
+                onChanged: (value){
+                  setState(() {
+                    phoneController.text =value;
+                  });
+                },
                 decoration: InputDecoration(
                   hintText: "Enter phone number",
                   enabledBorder:OutlineInputBorder(
