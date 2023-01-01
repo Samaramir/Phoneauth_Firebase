@@ -79,9 +79,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                      padding: const EdgeInsets.all(8.0),
                      child: InkWell(
                        onTap: (){
-                        // show##
+                        showCountryPicker(
+                            context: context,
+                            onSelect: (value){
+                              setState(() {
+                                SelectedCountery=value;
+                              });
+
+                            });
                        },
-                       child: Text("${SelectedCountery.flagEmogi} +${SelectedCountery.phoneCode}",
+                       child: Text("${SelectedCountery.flagEmoji} +${SelectedCountery.phoneCode}",
                          style: const TextStyle(
                          fontSize: 18,
                          color: Colors.black,
