@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:country_picker/country_picker.dart';
+
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
@@ -8,10 +10,17 @@ class RegisterScreen extends StatefulWidget {
 
 class _RegisterScreenState extends State<RegisterScreen> {
   final TextEditingController phoneController=TextEditingController();
-  Countery SelectedCountery = Countery(
-    PhoneCode:"91",
-    counteryCode:"IN",
-
+  Country SelectedCountery =Country(
+      phoneCode: "20",
+      countryCode:"EG",
+      e164Sc: 0,
+      geographic: true,
+      level: 1,
+      name:"Egypt",
+      example: "Egypt",
+      displayName: "Egypt",
+      displayNameNoCountryCode: "EG",
+      e164Key: ""
   );
   @override
   Widget build(BuildContext context) {
