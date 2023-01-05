@@ -114,6 +114,17 @@ void signInWithPhone(BuildContext context ,String PhoneNumber)async{
   userModel.phoneNumber = _firebaseAuth.currentUser!.phoneNumber!;
   userModel.uid = _firebaseAuth.currentUser!.phoneNumber!;
   });
+  _userModel = userModel;
+  await _firebaseStore
+      .collection("users")
+      .doc(_uid)
+      .set(userModel.toMap())
+      .then((value) {
+  onSuccess();
+  _isLoading = false;
+  notifyListeners();
+  });
+  }
 
 
 }
