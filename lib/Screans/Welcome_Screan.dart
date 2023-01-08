@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:phoneauth_firebase/Screans/Home_screan.dart';
 import 'package:phoneauth_firebase/Screans/Register_Screan.dart';
+import 'package:phoneauth_firebase/provider/auth_provider.dart';
+import 'package:provider/provider.dart';
 
 import '../widgtes/custtom_button.dart';
 
@@ -13,8 +16,11 @@ class WelcomeScrean extends StatefulWidget {
 }
 
 class _WelcomeScreanState extends State<WelcomeScrean> {
+
+
   @override
   Widget build(BuildContext context) {
+    final ap=Provider.of<Authprovider>(context,listen: false);
     return Scaffold(
       body: SafeArea( child: Center(
         child: Padding(
@@ -39,6 +45,9 @@ class _WelcomeScreanState extends State<WelcomeScrean> {
                 height: 50,
                 child: CustomButton(
                   onPressed:(){
+                    ap.isSignedIn == true
+                        ?Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeScreen())):
+
                     Navigator.push(context,MaterialPageRoute(builder:(context)=>const RegisterScreen(),),
                     );
                   },
