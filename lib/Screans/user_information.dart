@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:firebaseproject/provider/auth_provider.dart';
 import 'package:phoneauth_firebase/Screans/Home_screan.dart';
 import 'package:phoneauth_firebase/modiels/user_model.dart';
+import 'package:phoneauth_firebase/utils/utils.dart';
 import 'package:phoneauth_firebase/widgtes/custtom_button.dart';
 import 'package:provider/provider.dart';
 
@@ -52,7 +52,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
         padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 5.0),
         child: Center(
           child: Column(children: [
-            InkWell(onTap:()=> SelectImage(),
+            InkWell(onTap:()=>selectImage(),
               child: image == null ? const CircleAvatar(
                 backgroundColor: Colors.purple,
                 radius: 50,
@@ -99,7 +99,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 ],
               ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             SizedBox(
               height: 50,
               width: MediaQuery.of(context).size.width * 90.0,
@@ -197,7 +197,7 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
      );
    }
    else{
-     showSnackBar(context,"please upload your profile");
+      showScanBar(context, "please upload your profile");
 
    }
 

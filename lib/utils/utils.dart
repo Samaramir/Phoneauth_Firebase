@@ -9,14 +9,14 @@ void showScanBar(BuildContext context,String content){
 Future<File?>pickImage(BuildContext context)async{
   File? image;
   try{
-    final pickImage =await ImagePicker().pickImage(Source :ImageSource.gallery);
-    if(pickImage=null!){
+    final pickImage =await ImagePicker().pickImage(source: ImageSource.gallery);
+    if(pickImage!=null){
       image=File(pickImage.path);
     }
 
   }
   catch(e) {
-    showSnackBar(context, e.toString());
+    showScanBar(context, e.toString());
   }
    return image;
 }

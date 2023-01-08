@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:phoneauth_firebase/Screans/otp_screen.dart';
 import 'package:phoneauth_firebase/modiels/user_model.dart';
@@ -95,7 +94,7 @@ class Authprovider extends ChangeNotifier {
       notifyListeners();
     }
     on FirebaseAuthException catch (e) {
-      showSnackBar(context, e.message.toString());
+      showScanBar(context, e.message.toString());
       _isLoading = false;
       notifyListeners();
     }
@@ -142,7 +141,7 @@ class Authprovider extends ChangeNotifier {
     }
     on FirebaseAuthException catch (e)
     {
-      showSnackBar(context, e.message.toString());
+      showScanBar(context,e.message.toString());
       _isLoading = false;
       notifyListeners();
   }

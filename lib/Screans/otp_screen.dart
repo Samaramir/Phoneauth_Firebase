@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:phoneauth_firebase/Screans/Home_screan.dart';
 import 'package:phoneauth_firebase/Screans/user_information.dart';
+import 'package:phoneauth_firebase/utils/utils.dart';
 import 'package:pinput/pinput.dart';
-import 'package:firebaseproject/provider/auth_provider.dart';
-import 'package:firebaseproject/screens/home_screen.dart';
-import 'package:firebaseproject/screens/user_information.dart';
-import 'package:firebaseproject/utils/utiles.dart';
-import 'package:firebaseproject/widgets/custome_button.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/auth_provider.dart';
@@ -20,6 +17,7 @@ class OtpScreen extends StatefulWidget {
 }
 
 class _OtpScreenState extends State<OtpScreen> {
+  String? otpCode;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,7 +92,8 @@ class _OtpScreenState extends State<OtpScreen> {
                     verifyOtp(context, otpCode!);
 
                   }else{
-                    showSnackBar(context, "Enter 6-Digit code");
+                    showScanBar(context, "Enter 6-Digit code");
+
                   }
                 }
             ),
